@@ -1,6 +1,6 @@
 "use client";
 
-import { TRPCReactProvider } from "@/modules/trpc/client";
+import { TRPCReactProvider } from "@/modules/backend/trpc/client";
 import { useEffect, useState } from "react";
 
 interface ProviderProps {

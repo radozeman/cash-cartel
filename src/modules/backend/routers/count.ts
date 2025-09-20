@@ -1,9 +1,9 @@
 import { uuid } from "@/lib/uuid";
-import { count } from "@/modules/db/schema";
+import { count } from "@/modules/backend/db/schemas/count-schema";
 import {
   createTRPCRouter,
   protectedProcedure,
-} from "@/modules/trpc/server/init";
+} from "@/modules/backend/trpc/server/init";
 import { TRPCError } from "@trpc/server";
 import { eq } from "drizzle-orm";
 

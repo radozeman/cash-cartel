@@ -1,10 +1,10 @@
 import superjson from "superjson";
 
-import { db } from "@/modules/db";
 import { cache } from "react";
 
 import { initTRPC, TRPCError } from "@trpc/server";
 import { getSession } from "@/modules/auth/auth";
+import { db } from "@/modules/backend/db";
 
 const createTRPCContext = cache(() => ({
   db,

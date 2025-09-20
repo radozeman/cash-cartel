@@ -1,4 +1,4 @@
-import { createTRPCRouter } from "@/modules/trpc/server/init";
+import { createTRPCRouter } from "@/modules/backend/trpc/server/init";
 
 const appRouter = createTRPCRouter({});
 

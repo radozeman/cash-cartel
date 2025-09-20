@@ -1,4 +1,4 @@
-import { user } from "@/modules/db/schemas/auth-schema";
+import { user } from "@/modules/backend/db/schemas/auth-schema";
 import { integer, pgTable, text } from "drizzle-orm/pg-core";
 
 const count = pgTable("count", {

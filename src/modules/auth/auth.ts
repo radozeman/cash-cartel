@@ -1,13 +1,13 @@
-import { db } from "@/modules/db";
-import { betterAuth } from "better-auth";
-import { drizzleAdapter } from "better-auth/adapters/drizzle";
-import { nextCookies } from "better-auth/next-js";
+import { db } from "@/modules/backend/db";
 import {
   account,
   session,
   user,
   verification,
-} from "@/modules/db/schemas/auth-schema";
+} from "@/modules/backend/db/schemas/auth-schema";
+import { betterAuth } from "better-auth";
+import { drizzleAdapter } from "better-auth/adapters/drizzle";
+import { nextCookies } from "better-auth/next-js";
 import { headers } from "next/headers";
 
 const auth = betterAuth({

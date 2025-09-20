@@ -2,11 +2,11 @@ import { Providers } from "@/modules/providers";
 import "@/modules/ui/design-system/globals.css";
 import { geistMono, geistSans } from "@/modules/ui/fonts";
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="en">
       <body
@@ -16,4 +16,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

@@ -1,5 +1,7 @@
 import { SignInPage } from "@/modules/auth/components/sign-in";
 
-export default function SignIn() {
+const SignIn = () => {
   return <SignInPage />;
-}
+};
+
+export default SignIn;

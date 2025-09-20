@@ -1,3 +1,4 @@
+import { Providers } from "@/modules/providers";
 import "@/modules/ui/design-system/globals.css";
 import { geistMono, geistSans } from "@/modules/ui/fonts";
 
@@ -11,7 +12,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

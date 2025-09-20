@@ -1,6 +1,6 @@
 import auth from "@/modules/auth/auth";
 import { toNextJsHandler } from "better-auth/next-js";
 
-const { POST, GET } = toNextJsHandler(auth.handler);
+const { GET, POST } = toNextJsHandler(auth.handler);
 
-export { POST, GET };
+export { GET, POST };

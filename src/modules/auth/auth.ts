@@ -7,7 +7,8 @@ import {
   session,
   user,
   verification,
-} from "@/modules/db/schema/auth-schema";
+} from "@/modules/db/schemas/auth-schema";
+import { headers } from "next/headers";
 
 const auth = betterAuth({
   database: drizzleAdapter(db, {
@@ -19,14 +20,23 @@ const auth = betterAuth({
       verification,
     },
   }),
+  pages: {
+    signIn: "/sign-in",
+  },
   socialProviders: {
     github: {
       clientId: process.env.GITHUB_CLIENT_ID as string,
       clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
     },
   },
-  secret: process.env.AUTH_SECRET!,
+  secret: process.env.BETTER_AUTH_SECRET!,
   plugins: [nextCookies()],
 });
 
+const getSession = async () =>
+  auth.api.getSession({
+    headers: await headers(),
+  });
+
+export { getSession };
 export default auth;

@@ -8,6 +8,13 @@
       "when": 1758304044352,
       "tag": "0000_optimal_bastion",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1758327248950,
+      "tag": "0001_red_the_executioner",
+      "breakpoints": true
     }
   ]
 }

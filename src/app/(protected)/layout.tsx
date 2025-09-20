@@ -10,4 +10,4 @@ const ProtectedLayout = async ({ children }: { children: ReactNode }) => {
   return <>{children}</>;
 };
 
-export { ProtectedLayout };
+export default ProtectedLayout;
